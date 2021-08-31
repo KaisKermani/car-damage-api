@@ -1,0 +1,12 @@
+Flask==2.0.1
+tensorboard==2.5.0
+tensorboard-data-server==0.6.1
+tensorboard-plugin-wit==1.8.0
+tensorflow==2.5.0
+tensorflow-datasets==4.4.0
+tensorflow-estimator==2.5.0
+tensorflow-metadata==1.2.0
+pandas==1.2.5
+numpy==1.19.5
+Pillow==7.2.0
+plotly==4.14.3
