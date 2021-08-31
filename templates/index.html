@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+
+{% for filename in filenames %}
+    <li>{{ filename }}</li>
+{% endfor %}
+
+<form action="/" method="POST" enctype="multipart/form-data">
+  <input type="file" id="images" name="images" multiple>
+  <input type="submit">
+</form>
+
+</body>
+</html>
