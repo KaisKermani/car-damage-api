@@ -17,18 +17,28 @@
   </div>
 </nav>
 <div class="container  pt-4" style="background: rgba(255, 255, 255, 0.9);">
-    {% if filenames|length > 0 %}
+    {% if preds|length > 0 %}
         <h6 class="display-6 text-start">Damage summary:</h6>
         <table class="table table-striped table-bordered ">
             <thead class="table-success">
                 <th scope="col">#</th>
-                <th scope="col">Filename</th>
+                {% for key, val in preds[0].items() %}
+                    <th scope="col">{{ key }}</th>
+                {% endfor %}
             </thead>
             <tbody>
-                {% for filename in filenames %}
+                {% for img in preds %}
                     <tr>
                         <th scope="row">{{ loop.index }}</th>
-                        <td>{{ filename }}</td>
+                        {% for key, val in img.items() %}
+                            {% if key=='image' %}
+                                <td>{{ val }}</td>
+                            {% else %}
+                                <td class="{{ "table-danger" if (val|float)>=0.5 else "table-default"}}">
+                                    {{ "%.2f"|format((val|float)) }}
+                                </td>
+                            {% endif %}
+                        {% endfor %}
                     </tr>
                 {% endfor %}
             </tbody>
@@ -54,6 +64,11 @@
         </div>
     </form>
 
+    {% if no_file %}
+        <div class="alert alert-warning" role="alert">
+          You have to send at least one image!
+        </div>
+    {% endif %}
 </div>
 </body>
 </html>
