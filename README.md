@@ -35,3 +35,8 @@ The metrics used in the validation step are accuracy and f1-score:
 | Lamp          | 85       | 75       |
 | Tire          | 94       | 35       |
 | Mirror        | 96       | 36       |
+
+
+## Full project report:
+Detailed walkthrough the different steps and processes of the project:
+https://colab.research.google.com/drive/1kGv-hCy6PUIVtjOVNMZNmDtQLvk0Gssd?usp=sharing
