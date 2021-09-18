@@ -38,5 +38,5 @@ The metrics used in the validation step are accuracy and f1-score:
 
 
 ## Full project report:
-Detailed walkthrough the different steps and processes of the project:
+Detailed walkthrough the different steps and processes of the project:  
 https://colab.research.google.com/drive/1kGv-hCy6PUIVtjOVNMZNmDtQLvk0Gssd?usp=sharing
